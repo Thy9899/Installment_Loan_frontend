@@ -1,0 +1,113 @@
+.productList-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background: #0f172a;
+
+  color: white;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-table th {
+  background: #111827;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.product-table td {
+  padding: 12px;
+  border-bottom: 1px solid #334155;
+}
+
+.product-table tr:hover {
+  background: #273449;
+}
+
+.search-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.search-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.reset-btn {
+  background: #475569;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.loading,
+.no-data {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Container holding the buttons */
+.btn-productList {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  justify-content: start;
+}
+
+/* Base style for both buttons */
+.btn-productList-edit,
+.btn-productList-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-productList-edit {
+  color: #4f46e5;
+}
+
+.btn-productList-edit:hover {
+  transform: translateY(-2px);
+}
+
+.btn-productList-edit:active {
+  transform: translateY(0);
+}
+
+.btn-productList-delete {
+  color: #ef4444;
+}
+
+.btn-productList-delete:hover {
+  transform: translateY(-2px);
+}
+
+.btn-productList-delete:active {
+  transform: translateY(0);
+}

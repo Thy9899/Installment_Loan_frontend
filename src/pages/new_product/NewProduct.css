@@ -1,0 +1,158 @@
+.new-product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background: #0f172a;
+
+  color: white;
+}
+
+.new-product-form {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  padding: 24px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.new-product-information {
+  border-bottom: 1px solid#94a3b8;
+  padding: 14px 0;
+  margin-bottom: 20px;
+}
+
+.new-product-form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 18px;
+}
+
+.new-product-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-product-form-group label {
+  margin-bottom: 8px;
+
+  color: #cbd5e1;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Inputs */
+
+.new-product-form-group input,
+.new-product-form-group select,
+.new-product-form-group textarea {
+  padding: 13px 15px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+
+  color: white;
+
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.new-product-form-group input::placeholder,
+.new-product-form-group textarea::placeholder {
+  color: #64748b;
+}
+
+.new-product-form-group input:focus,
+.new-product-form-group select:focus,
+.new-product-form-group textarea:focus {
+  outline: none;
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
+  background: #0f172a;
+}
+
+/* BUTTON */
+.new-product-button-group {
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-primary {
+  padding: 13px 34px;
+
+  border: none;
+  border-radius: 12px;
+
+  /* font-weight: 600; */
+
+  cursor: pointer;
+
+  background: #2563eb;
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  padding: 13px 24px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: transparent;
+
+  color: #cbd5e1;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.alert {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.alert.success {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid #22c55e;
+}
+
+.alert.error {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid #ef4444;
+}

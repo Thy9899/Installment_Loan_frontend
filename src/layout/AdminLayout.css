@@ -1,0 +1,9 @@
+.content {
+  margin-left: 270px;
+  margin-top: 86px;
+  min-height: calc(100vh - 86px);
+
+  background: linear-gradient(135deg, #020617, #111827, #1e1b4b);
+  color: #fff;
+  padding: 20px;
+}

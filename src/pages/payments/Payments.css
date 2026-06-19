@@ -1,0 +1,119 @@
+/* ==========================================================
+   SUBMIT INSTALLMENT BUTTON (GREEN)
+========================================================== */
+
+.submit-btn {
+  border-radius: 10px;
+
+  background: #10b981;
+  color: white;
+
+  /* font-weight: 600; */
+  font-size: 14px;
+
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25);
+}
+
+.submit-btn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==========================================================
+   PAYOFF BUTTON (DANGER / WARNING STYLE)
+========================================================== */
+
+.payoff-btn {
+  border-radius: 10px;
+
+  background: #ef4444;
+  color: white;
+
+  /* font-weight: 600; */
+  font-size: 14px;
+
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.25);
+}
+
+.payoff-btn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.payoff-btn:active {
+  transform: scale(0.98);
+}
+
+.payoff-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==========================================================
+   PRINT BUTTON (SECONDARY GREEN OUTLINE STYLE)
+========================================================== */
+
+.print-trigger-btn {
+  padding: 12px 22px;
+  border-radius: 12px;
+
+  background: transparent;
+  color: #22c55e;
+
+  border: 1px solid rgba(34, 197, 94, 0.5);
+
+  font-weight: 600;
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.print-trigger-btn:hover {
+  background: rgba(34, 197, 94, 0.12);
+  border-color: #22c55e;
+  transform: translateY(-1px);
+}
+
+.print-trigger-btn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================
+   BUTTON ROW LAYOUT
+========================================================== */
+
+.payment-actions-flex-row {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+  justify-content: right;
+  margin-top: 20px;
+}
+
+.payment-actions-flex-row button {
+  /* flex: 1; */
+  padding: 12px 18px;
+}
+
+/* ==========================================================
+   RESPONSIVE BUTTONS
+========================================================== */
+
+@media (max-width: 768px) {
+  .payment-actions-flex-row {
+    flex-direction: column;
+  }
+
+  .payment-actions-flex-row button {
+    width: 100%;
+  }
+}

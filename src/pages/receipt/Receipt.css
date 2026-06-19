@@ -1,0 +1,292 @@
+/* ==========================================================
+   Receipt Container
+========================================================== */
+
+.receipt-container {
+  width: 100%;
+  max-width: 850px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+
+  margin: auto;
+  justify-content: center;
+}
+
+/* ==========================================================
+   Header
+========================================================== */
+
+.receipt-header {
+  text-align: center;
+
+  padding: 35px 30px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.receipt-logo {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+}
+
+.receipt-logo img {
+  width: 48px;
+  height: 48px;
+}
+
+.business-name {
+  font-size: 26px;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  letter-spacing: 1px;
+}
+
+.business-description {
+  margin-top: 8px;
+
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.business-metadata {
+  margin-top: 6px;
+
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.receipt-title-badge {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  padding: 10px 20px;
+
+  border-radius: 999px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+/* ==========================================================
+   Body
+========================================================== */
+
+.receipt-body {
+  padding: 30px;
+}
+
+.receipt-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 0;
+}
+
+.label {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.value {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.highlight {
+  color: #60a5fa;
+  font-weight: 700;
+}
+
+.receipt-divider {
+  border: none;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  margin: 20px 0;
+}
+
+.total-line {
+  margin-top: 10px;
+
+  padding-top: 20px;
+
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.total-line .label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.total-line .value {
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #22c55e;
+}
+
+/* ==========================================================
+   Footer
+========================================================== */
+
+.receipt-footer {
+  text-align: center;
+
+  padding: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.thank-you {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.system-stamp {
+  margin-top: 8px;
+
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.print-trigger-btn {
+  margin-top: 20px;
+
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #10b981;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.print-trigger-btn:hover {
+  background: #059669;
+}
+
+/* ==========================================================
+   Empty State
+========================================================== */
+
+.empty-state {
+  margin-top: 100px;
+
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+/* ==========================================================
+   Print Mode
+========================================================== */
+
+@media print {
+  body {
+    background: white !important;
+  }
+
+  .no-print,
+  .sidebar,
+  .navbar {
+    display: none !important;
+  }
+
+  .content {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  .receipt-container {
+    max-width: 100%;
+    width: 100%;
+
+    border: none;
+    box-shadow: none;
+    background: white;
+    color: black;
+  }
+
+  .receipt-header,
+  .receipt-body,
+  .receipt-footer {
+    color: black;
+  }
+
+  .label,
+  .value,
+  .business-name,
+  .business-description,
+  .business-metadata,
+  .thank-you {
+    color: black !important;
+  }
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 768px) {
+  .receipt-search-bar {
+    flex-direction: column;
+  }
+
+  .receipt-search-bar button {
+    width: 100%;
+  }
+
+  .receipt-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .total-line {
+    align-items: flex-start;
+  }
+
+  .business-name {
+    font-size: 22px;
+  }
+}

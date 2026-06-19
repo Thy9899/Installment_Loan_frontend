@@ -1,0 +1,222 @@
+/* HEADER */
+.payment-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background: #0f172a;
+
+  color: white;
+}
+
+.payment-page-header h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* SELECT */
+.payment-loan-selector select {
+  padding: 12px;
+  width: 320px;
+  border-radius: 8px;
+  border: none;
+  background: #1e293b;
+  color: white;
+}
+
+/* SEARCH */
+.payment-search-container {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-search-container input {
+  width: 260px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #1d4ed8;
+  outline: none;
+  background: none;
+  color: #fff;
+}
+
+/* BUTTONS */
+.search-btn,
+.reset-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  /* font-weight: 500; */
+}
+
+.search-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.reset-btn {
+  background: #334155;
+  color: white;
+}
+
+.search-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.reset-btn:hover {
+  background: #475569;
+}
+
+/* SUMMARY CARD */
+.summary-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.summary-card div {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+}
+
+.summary-card div:hover {
+  transform: translateY(-2px);
+}
+
+.summary-card span {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.summary-card h3 {
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+/* TABLE */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.schedule-table th {
+  background: #111827;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.schedule-table td {
+  padding: 12px;
+  border-bottom: 1px solid #334155;
+}
+
+.schedule-table tr:hover {
+  background: #273449;
+}
+
+/* STATUS BADGE */
+.payment-status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.payment-status-badge.pending {
+  background: #f59e0b;
+  color: black;
+}
+
+.payment-status-badge.overdue {
+  background: #ef4444;
+  color: white;
+}
+
+.payment-status-badge.paid {
+  background: #22c55e;
+  color: white;
+}
+
+/* BUTTON */
+.pay-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  background: #1d4ed8;
+}
+
+/* MODAL */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 420px;
+  background: #0f172a;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal h3 {
+  margin-bottom: 10px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: none;
+  background: #1e293b;
+  color: white;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-actions button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions .submit-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.modal-actions button:not(.submit-btn) {
+  background: #334155;
+  color: white;
+}

@@ -1,0 +1,213 @@
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background: #0f172a;
+
+  color: white;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.report-table th {
+  background: #111827;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.report-table td {
+  padding: 12px;
+  border-bottom: 1px solid #334155;
+}
+
+.report-table tr:hover {
+  background: #273449;
+}
+
+.report-date {
+  padding: 12px;
+  width: 220px;
+  border-radius: 8px;
+  border: none;
+  background: #1e293b;
+  color: white;
+}
+
+/* Make the date icon white */
+.rrr input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* ========== REPORT CARD ========== */
+/* Container to lay cards out cleanly side-by-side */
+.report-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* Individual Metric Cards */
+.report-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.3s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Icon Containers */
+.report-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  font-size: 24px;
+  flex-shrink: 0; /* Prevents the icon from squeezing on small displays */
+}
+
+/* Accent color thematic variants for icons */
+.report-icon.icon-blue {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+}
+
+.report-icon.icon-danger {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
+.report-icon.icon-success {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+}
+
+.report-icon.icon-warning {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+}
+
+/* Content Body */
+.report-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.report-label {
+  font-size: 13px;
+  color: #94a3b8; /* Soft slate gray for labels */
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.report-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+/* Profile Metadata Cards Layout Grid */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.info-card {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.card-heading {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3b82f6;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 10px;
+}
+
+.info-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  font-size: 14px;
+}
+
+.info-label {
+  color: #64748b;
+}
+
+.info-value {
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.value-highlight {
+  color: #60a5fa;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+.value-danger {
+  color: #f87171;
+  font-weight: 700;
+}
+
+.value-success {
+  color: #4ade80 !important;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 16px 0;
+}
+
+/* STATUS BADGE */
+.report-status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  background: #22c55e;
+  color: white;
+}

@@ -1,0 +1,311 @@
+:root {
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Header & Search Bar */
+.customer-directory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background: #0f172a;
+
+  color: white;
+}
+
+.header-title-block h2 {
+  margin: 0 0 0.25rem 0;
+}
+
+.header-title-block p {
+  color: #64748b;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.search-wrapper {
+  position: relative;
+  min-width: 320px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.clear-search {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Directory Layout Grid */
+.customer-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Customer Card Base */
+.customer-card {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Card Header Section */
+.card-profile-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.customer-avatar {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #40a27c);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ebecf0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.customer-identity {
+  flex-grow: 1;
+}
+
+.customer-identity h3 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.customer-identity:hover h3 {
+  text-decoration: underline;
+}
+
+.customer-code-tag {
+  font-family: monospace;
+  font-size: 0.8rem;
+  background-color: #1a204e;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  color: #c9c2bc;
+}
+
+.card-divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 1rem 0;
+}
+
+/* Badges */
+.status-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50px;
+  text-transform: capitalize;
+}
+
+.status-badge.active {
+  background-color: #bbdbcc;
+  color: #147c59;
+}
+
+.status-badge.inactive,
+.status-badge.no-contract {
+  background-color: #f8fafc;
+  color: #64748b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Contact Module */
+.customer-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.detail-item .label {
+  color: #64748b;
+}
+
+.detail-item .value {
+  color: #656e85;
+  font-weight: 500;
+}
+
+.detail-item .value-email {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+/* Financial Block Subsections */
+.contract-financials-box {
+  background: linear-gradient(135deg, #1c2b4d, #1e293b);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.85rem;
+  margin-top: auto;
+}
+
+.financial-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 0.35rem;
+}
+
+.contract-num {
+  font-family: monospace;
+  color: #2563eb;
+}
+
+.financial-data-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-node,
+.data-nodeHighlight {
+  display: flex;
+  flex-direction: column;
+}
+
+.data-nodeHighlight {
+  align-items: flex-end;
+}
+
+.node-label {
+  font-size: 0.7rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.15rem;
+}
+
+.node-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #52894d;
+}
+
+.text-alert {
+  color: #ef4444 !important;
+}
+
+.contract-empty-box {
+  background-color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.contract-empty-box p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* System Alerts Feedback */
+.directory-loader,
+.empty-state-card {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* ======================== */
+.payment-badge {
+  margin-top: 35px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.payment-badge.overdue {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.payment-badge.pending {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.payment-badge.paid {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}

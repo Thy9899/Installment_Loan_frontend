@@ -1,0 +1,295 @@
+/* HEADER */
+.new-customer-header {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background: #0f172a;
+
+  color: white;
+}
+
+/* Layout */
+.new-customer-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+/* Cards */
+
+.new-customer-loan-card,
+.new-customer-summary-card {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  padding: 24px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+/* .new-customer-card-header {
+  margin-bottom: 20px;
+} */
+
+.new-customer-card-header h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.new-customer-card-header p {
+  margin-top: 8px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* Form */
+
+.new-customer-loan-form {
+  width: 100%;
+}
+
+.new-customer-information {
+  border-bottom: 1px solid#94a3b8;
+  padding: 14px 0;
+  margin-bottom: 20px;
+}
+
+.new-customer-form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 18px;
+}
+
+.new-customer-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-customer-form-group label {
+  margin-bottom: 8px;
+
+  color: #cbd5e1;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Inputs */
+
+.new-customer-form-group input,
+.new-customer-form-group select,
+.new-customer-form-group textarea {
+  padding: 13px 15px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+
+  color: white;
+
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.new-customer-form-group input::placeholder,
+.new-customer-form-group textarea::placeholder {
+  color: #64748b;
+}
+
+.new-customer-form-group input:focus,
+.new-customer-form-group select:focus,
+.new-customer-form-group textarea:focus {
+  outline: none;
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
+  background: #0f172a;
+}
+
+/* Make the date icon white */
+.new-customer-form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Buttons */
+
+.new-customer-button-group {
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-save {
+  padding: 13px 24px;
+
+  border: none;
+  border-radius: 12px;
+
+  /* font-weight: 600; */
+  color: white;
+
+  cursor: pointer;
+
+  background: #2563eb;
+
+  transition: all 0.3s ease;
+}
+
+.btn-save:hover {
+  transform: translateY(-1px);
+  background: #1d4ed8;
+}
+
+.btn-cancel {
+  padding: 13px 24px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: transparent;
+
+  color: #cbd5e1;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Summary Card */
+.new-customer-summary-card {
+  position: sticky;
+  top: 20px;
+
+  height: fit-content;
+}
+
+.new-customer-summary-card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: white;
+}
+
+/* Summary Items */
+
+.new-customer-summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.new-customer-summary-item span {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.new-customer-summary-item strong {
+  color: white;
+  font-size: 15px;
+}
+
+.new-customer-summary-divider {
+  margin: 20px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Monthly Installment Box */
+
+.new-customer-monthly-box {
+  margin-top: 20px;
+
+  text-align: center;
+
+  padding: 24px;
+
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+
+  border-top: 1px solid rgba(68, 143, 143);
+
+  color: white;
+}
+
+.new-customer-monthly-box p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.new-customer-monthly-box h2 {
+  margin: 12px 0;
+
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.new-customer-monthly-box span {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Disabled */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .new-customer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .new-customer-summary-card {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .new-customer-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .new-customer-button-group {
+    flex-direction: column;
+  }
+
+  .btn-save,
+  .btn-cancel {
+    width: 100%;
+  }
+}

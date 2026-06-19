@@ -1,0 +1,14 @@
+.payoff-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.payoff-btn {
+  align-self: flex-end;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.25);
+}

@@ -1,0 +1,66 @@
+/* HEADER */
+.customer-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background: #0f172a;
+
+  color: white;
+}
+
+.customer-list-search-wrapper {
+  max-width: 400px;
+}
+
+/* =========================================
+   Table Card 
+   =========================================*/
+
+/* Table */
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.customer-table th {
+  background: #111827;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.customer-table td {
+  padding: 12px;
+  border-bottom: 1px solid #334155;
+}
+
+.customer-table tr:hover {
+  background: #273449;
+}
+/* Loading / Empty */
+.loading-row,
+.empty-row {
+  text-align: center;
+  padding: 30px !important;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Responsive */
+.customer-table-wrapper {
+  overflow-x: auto;
+}
+
+.customer-table {
+  min-width: 1200px;
+}
