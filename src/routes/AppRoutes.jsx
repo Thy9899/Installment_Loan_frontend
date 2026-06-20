@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Login from "../pages/login/Login";
 
@@ -39,219 +39,219 @@ function PrivateRoute({ children }) {
   return token ? children : <Login />;
 }
 
-export default function AppRoutes() {
+const AppRoutes = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* Public */}
-        <Route path="/" element={<Login />} />
+    <Routes>
+      {/* Public */}
+      <Route path="/" element={<Login />} />
 
-        {/* Protected */}
-        <Route
-          path="/dashboard"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <Dashboard />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-
-        <Route
-          path="/new-customer"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <LoanApplicationProvider>
-                  <NewCustomer />
-                </LoanApplicationProvider>
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-
-        <Route
-          path="/customer-list"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <CustomerList />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-
-        <Route
-          path="/new-product"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <NewProduct />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-
-        <Route
-          path="/product-list"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <ProductList />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-
-        {/* LENDING */}
-        <Route
-          path="/loan-customer"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <LoanCustomer />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-
-        <Route
-          path="/payments-schedule/:contractNo?"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <PaymentsSchedule />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-
-        <Route
-          path="/payments/:contractNo?"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <Payments />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-
-        <Route
-          path="/pay-off"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <PayOff />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-
-        <Route
-          path="/print-receipt"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <PrintReceipt />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-
-        {/* PRODUCTS */}
-        <Route
-          path="/new-product/edit/:id"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <NewProduct />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-
-        {/* REPORTS */}
-        <Route
-          path="/reports/loan-portfolio"
-          element={
+      {/* Protected */}
+      <Route
+        path="/dashboard"
+        element={
+          <PrivateRoute>
             <AdminLayout>
-              <LoanPortfolioReport />
+              <Dashboard />
             </AdminLayout>
-          }
-        />
+          </PrivateRoute>
+        }
+      />
 
-        <Route
-          path="/reports/daily-collection"
-          element={
+      <Route
+        path="/new-customer"
+        element={
+          <PrivateRoute>
             <AdminLayout>
-              <DailyCollectionReport />
+              <LoanApplicationProvider>
+                <NewCustomer />
+              </LoanApplicationProvider>
             </AdminLayout>
-          }
-        />
+          </PrivateRoute>
+        }
+      />
 
-        <Route
-          path="/reports/overdue-loans"
-          element={
+      <Route
+        path="/customer-list"
+        element={
+          <PrivateRoute>
             <AdminLayout>
-              <OverdueLoanReport />
+              <CustomerList />
             </AdminLayout>
-          }
-        />
+          </PrivateRoute>
+        }
+      />
 
-        <Route
-          path="/reports/customer-statement"
-          element={
+      <Route
+        path="/new-product"
+        element={
+          <PrivateRoute>
             <AdminLayout>
-              <CustomerStatementReport />
+              <NewProduct />
             </AdminLayout>
-          }
-        />
+          </PrivateRoute>
+        }
+      />
 
-        <Route
-          path="/reports/outstanding-balance"
-          element={
+      <Route
+        path="/product-list"
+        element={
+          <PrivateRoute>
             <AdminLayout>
-              <OutstandingBalanceReport />
+              <ProductList />
             </AdminLayout>
-          }
-        />
+          </PrivateRoute>
+        }
+      />
 
-        {/* SETTINGS */}
-        <Route
-          path="/profile"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <Profile />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
+      {/* LENDING */}
+      <Route
+        path="/loan-customer"
+        element={
+          <PrivateRoute>
+            <AdminLayout>
+              <LoanCustomer />
+            </AdminLayout>
+          </PrivateRoute>
+        }
+      />
 
-        <Route
-          path="/new-admin"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <NewAdmin />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
+      <Route
+        path="/payments-schedule/:contractNo?"
+        element={
+          <PrivateRoute>
+            <AdminLayout>
+              <PaymentsSchedule />
+            </AdminLayout>
+          </PrivateRoute>
+        }
+      />
 
-        <Route
-          path="/cob"
-          element={
-            <PrivateRoute>
-              <AdminLayout>
-                <COB />
-              </AdminLayout>
-            </PrivateRoute>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+      <Route
+        path="/payments/:contractNo?"
+        element={
+          <PrivateRoute>
+            <AdminLayout>
+              <Payments />
+            </AdminLayout>
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/pay-off"
+        element={
+          <PrivateRoute>
+            <AdminLayout>
+              <PayOff />
+            </AdminLayout>
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/print-receipt"
+        element={
+          <PrivateRoute>
+            <AdminLayout>
+              <PrintReceipt />
+            </AdminLayout>
+          </PrivateRoute>
+        }
+      />
+
+      {/* PRODUCTS */}
+      <Route
+        path="/new-product/edit/:id"
+        element={
+          <PrivateRoute>
+            <AdminLayout>
+              <NewProduct />
+            </AdminLayout>
+          </PrivateRoute>
+        }
+      />
+
+      {/* REPORTS */}
+      <Route
+        path="/reports/loan-portfolio"
+        element={
+          <AdminLayout>
+            <LoanPortfolioReport />
+          </AdminLayout>
+        }
+      />
+
+      <Route
+        path="/reports/daily-collection"
+        element={
+          <AdminLayout>
+            <DailyCollectionReport />
+          </AdminLayout>
+        }
+      />
+
+      <Route
+        path="/reports/overdue-loans"
+        element={
+          <AdminLayout>
+            <OverdueLoanReport />
+          </AdminLayout>
+        }
+      />
+
+      <Route
+        path="/reports/customer-statement"
+        element={
+          <AdminLayout>
+            <CustomerStatementReport />
+          </AdminLayout>
+        }
+      />
+
+      <Route
+        path="/reports/outstanding-balance"
+        element={
+          <AdminLayout>
+            <OutstandingBalanceReport />
+          </AdminLayout>
+        }
+      />
+
+      {/* SETTINGS */}
+      <Route
+        path="/profile"
+        element={
+          <PrivateRoute>
+            <AdminLayout>
+              <Profile />
+            </AdminLayout>
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/new-admin"
+        element={
+          <PrivateRoute>
+            <AdminLayout>
+              <NewAdmin />
+            </AdminLayout>
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/cob"
+        element={
+          <PrivateRoute>
+            <AdminLayout>
+              <COB />
+            </AdminLayout>
+          </PrivateRoute>
+        }
+      />
+    </Routes>
   );
-}
+};
+
+export default AppRoutes;
